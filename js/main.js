@@ -11,14 +11,15 @@ $(window).load(function(){
 	$(window).bind('scroll', function() {
         if ($(window).scrollTop() > $(".navbar").height()+30) {
             $(".navbar").addClass("show-nav");
+			$('.nav2 .navbar-brand img').attr("src","img/youchat.png");	
         } else {
             	$(".navbar").removeClass("show-nav");
 				$(".navbar .navscroll").collapse({toggle: false});
 				$(".navbar .navscroll").collapse("hide");
 				$(".navbar .navbar-toggle").addClass("collapsed");
+				$('.nav2 .navbar-brand img').attr("src","img/white_youchat.png");
         }
     });
-		
 	//wow animations
 	var wow = new WOW({
     	offset:100,

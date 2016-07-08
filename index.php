@@ -43,7 +43,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navscroll"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="#home" title="Dove - Modern Start Up landing Page"><img src="img/youchat.png" width="100" height="26" alt="youchat"></a> </div>
+				<a class="navbar-brand" href="#home" ><img src="img/youchat.png" width="100" height="26" alt="youchat"></a> </div>
 			<div class="navbar-collapse collapse navscroll">
 				<div class="navbar-form navbar-right"> <a href="#download" class="btn btn-default download-link"><i class="icon_cloud-download_alt"></i><span data-trans="download"></span></a></div>
 				<ul class="nav navbar-nav navbar-right">
@@ -324,7 +324,8 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<ul class="ft-links">
-						<li><a href="mailto:info@youchat.com" >info@youchat.com</a></li>
+						<li><a href="privacy-policy.php" >Privacy Policy</a></li>
+						<li><a href="contacts.php" >Contact Us</a></li>
 					</ul>
 					<p class="copyright">&copy; 2016 <span data-trans="copyright">YouChat, All Rights Reserved.</span></p>
 				</div>

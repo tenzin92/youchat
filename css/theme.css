@@ -30,7 +30,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, a{color:#393939;}
 .panel-group .panel-heading:hover .panel-title a, .panel-group .panel-heading.active .panel-title a{color:#fff;}
 .panel .panel-body{border:0 !important;}
 .thumbnail.pull-left{margin:0 10px 10px 0;}
-
+.container{
+  position: relative;
+}
 /* font sizes */
 .navbar-nav > li > a, .navbar-form a, .btn{font-size:12px;}
 .navbar-right~.navbar-right{
@@ -113,7 +115,7 @@ h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small{font-weight:600 !i
 .navbar-brand>img{
 	display: none;
 }
-.show-nav .navbar-brand>img{
+.show-nav .navbar-brand>img, .nav2 .navbar-brand>img{
 	display: block;
 }
 
@@ -125,7 +127,24 @@ form{display:block; margin:30px auto;}
 .btn i{font-size:2em; font-weight:normal !important; float:left; margin-right:8px;}
 .btn-link > i{float:none; margin-left:8px; margin-right:0; font-size:inherit;}
 .btn:hover, .btn:focus, .btn:active{box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25); outline:none !important;}
-.form-control, .form-control:hover, .form-control:focus{border-color:#fff; background:#fff; box-shadow:none;}
+.form-control, .form-control:hover, .form-control:focus{border-color:#fff; background:#f5f5f5; margin-bottom: 15px; box-shadow:none;}
+input[type=text], input[type=email]{
+  height: 45px;
+}
+input[type=submit] {
+    margin: 0;
+    -webkit-appearance: none;
+    background: #808285;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    font-size: 17px;
+    border-radius: 4px;
+    outline: 0;
+}
+input[type=submit]:hover {
+    background: #00b3ff;
+}
 .input-lg{font-size:14px; height:58px;}
 .form-control::-moz-placeholder{color:#4a4a4a;}
 .form-control:-ms-input-placeholder{color:#4a4a4a}
@@ -135,8 +154,19 @@ form{display:block; margin:30px auto;}
 .form-group{position:relative; margin-bottom:30px;}
 .form-group .error-msg{position:absolute; left:0; bottom:-20px; width:100%;}
 label.error{font-size:12px; font-weight:normal;}
-textarea.form-control{padding:20px 25px;}
-
+#contact-form{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.error{
+  background: #cc2f1e;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  max-width: 500px;
+} 
 #hero{
   position: fixed;
   top: 0;
@@ -162,6 +192,7 @@ textarea.form-control{padding:20px 25px;}
 .banner{color:#fff; margin-bottom:-60px; position:relative; z-index:20;}
 .logo{margin-bottom:100px; display:block;}
 .banner h1{margin-bottom:40px;}
+.banner h1.big{margin: 90px 0 140px;}
 .banner > .container{position:relative;}
 .available-on{position:absolute; bottom:70px; left:15px; font-size:10px; color:rgba(255, 255, 255, 0.5);}
 .bg-img:after{position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; content:''; background:rgba(0, 0, 0, 0.4); backface-visibility: hidden;}
@@ -300,7 +331,7 @@ blockquote p{font-size:18px; font-family:'Libre Baskerville', Georgia, Times New
 .ft-links{margin:0 0 5px; padding:0;}
 .ft-links li{list-style:none; margin:0; padding:0; display:inline-block;}
 .ft-links a, .ft-links a:hover, .ft-links a:focus{color:#fff;}
-.ft-links li + li:before{content:'-'; margin:0 6px; color:#999;}
+.ft-links li + li:before{content:'|'; margin:0 6px; color:#999;}
 .social{margin:0; padding:0;}
 .social li{display:inline-block; margin:0 4px; list-style:none; padding:0;}
 .social li a{display:inline-block; outline:none;}
@@ -448,12 +479,15 @@ blockquote p{font-size:18px; font-family:'Libre Baskerville', Georgia, Times New
 }
 @media (max-width:480px){
 	body{padding-top:40px;}
-	.team-member.left .content, .team-member.right .content, ul, ol{text-align:center !important;}
+  .navbar-brand{
+    padding: 13px 15px;
+  }
+	.team-member.left .content, .team-member.right .content{text-align:center !important;}
 	ul.list{text-align:left !important;}
 	.logo{text-align:center; margin-top: 30px; margin-bottom: 20px;}
 	h1, .h1{font-size:28px; text-align:center;}
   .banner h1{
-    font-size: 20px; 
+    font-size: 25px; 
     line-height: 140%;
   }
 	.banner h1{margin-top:80px;}
@@ -468,6 +502,9 @@ blockquote p{font-size:18px; font-family:'Libre Baskerville', Georgia, Times New
 	.team-member.left .member-photo, .team-member.right .member-photo{float:none; width:100%; display:block;}
 	.banner .btn{min-width:200px;}
 	.thumbnail.pull-left{float:none; width:100%; height:auto;}
+  .footer {
+    padding: 30px 0;
+  }
 }
 @media (max-width:400px){
 	.alt .banner h1 > small{font-size:16px;}	
